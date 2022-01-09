@@ -1,0 +1,173 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Variables */
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* Accent */
+  --blue: hsl(248, 32%, 49%);
+  /* Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+/* =========================================================== */
+/* ==================== Mobile Version ========================*/
+/* =========================================================== */
+
+/* General Styles */
+/* All */
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  padding: 20px;
+  background: url(images/bg-intro-mobile.png) center no-repeat;
+  background-color: var(--red);
+}
+h1 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  padding: 0 50px 0 50px;
+}
+/* Specific Styles */
+/* ============== Main Wrapper =============*/
+/* (common styles in the main wrapper) */
+/* Header and Trial Section (common styles) */
+header,
+.trial {
+  color: #fff;
+  text-align: center;
+}
+/* Trial and Sign Up (common styles) */
+.trial,
+.sign-up {
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px #dd6767;
+}
+/* specific styles in the main wrapper */
+/* Main Wrapper */
+main {
+  display: grid;
+  grid-template: 225px 80px 470px / 325px;
+  grid-template-areas:
+    "header"
+    "trial"
+    "sign-up";
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+/* Header */
+header {
+  grid-area: header;
+}
+/* Trial Section */
+.trial {
+  grid-area: trial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  background-color: var(--blue);
+}
+/* Sign Up Section */
+.sign-up {
+  grid-area: sign-up;
+  background-color: #fff;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+input {
+  width: 100%;
+  height: 55px;
+  border: 1px solid rgb(224, 218, 218);
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.input {
+  position: relative;
+  width: 100%;
+}
+::placeholder {
+  padding-left: 20px;
+}
+button {
+  width: 100%;
+  height: 55px;
+  border: unset;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 0px #30ba7f;
+}
+button:active {
+  box-shadow: 0px 3px 0px #30ba7f;
+}
+button:hover {
+  cursor: pointer;
+}
+/* Terms Section */
+.terms {
+  width: 100%;
+  padding: 0 20px 0 20px;
+  font-size: 0.7em;
+  text-align: center;
+}
+.terms span {
+  color: #da8986;
+  font-size: 1em;
+  font-weight: 800;
+}
+/* Error messages styles */
+/* Exclamation Mark Icon */
+.error_sign {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+/* Error Message */
+.hidden {
+  display: none;
+}
+.error_message {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  color: red;
+  font-size: 0.75em;
+  margin-top: 10px;
+}
+/* ============= Footer Section =============*/
+footer {
+  margin: 30px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 1.2em;
+}
+/* =========================================================== */
+/* ==================== Desktop Version =======================*/
+/* =========================================================== */

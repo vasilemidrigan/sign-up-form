@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Main file link -->
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <!-- JavaScript Main file link -->
+    <script src="main.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Intro component with sign up form</title>
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <main>
+      <!-- Header Section -->
+      <header>
+        <h1>Learn to code by watching others</h1>
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </header>
+      <!-- Trial Section -->
+      <section role="trial" class="trial">
+        Try it free 7 days then $20/mo. thereafter
+      </section>
+      <!-- Sign Up Form Section -->
+      <section role="sign-up" class="sign-up">
+        <form method="GET" id="form">
+          <!-- First Name Input -->
+          <div class="input">
+            <input
+              type="text"
+              placeholder="First Name"
+              name="name"
+              id="first_name"
+              required
+            />
+            <img
+              src="images/icon-error.svg"
+              class="error_sign hidden"
+              alt="Error exclamation mark"
+            />
+            <p class="error_message hidden">Error Message</p>
+          </div>
+          <!-- Last Name Input -->
+          <div class="input">
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="name"
+              id="last_name"
+              required
+            />
+            <img
+              src="images/icon-error.svg"
+              class="error_sign hidden"
+              alt="Error exclamation mark"
+            />
+            <p class="error_message hidden">Error Message</p>
+          </div>
+
+          <!-- Email Input -->
+          <div class="input">
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              id="email"
+              required
+            />
+            <img
+              src="images/icon-error.svg"
+              class="error_sign hidden"
+              alt="Error exclamation mark"
+            />
+            <p class="error_message hidden">Error Message</p>
+          </div>
+
+          <!-- Password Input -->
+          <div class="input">
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              id="password"
+              required
+            />
+            <img
+              src="images/icon-error.svg"
+              class="error_sign hidden"
+              alt="Error exclamation mark"
+            />
+            <p class="error_message hidden">Error Message</p>
+          </div>
+
+          <button id="submit" type="submit">Claim your free trial</button>
+          <!-- Terms and Services Section -->
+          <section role="Terms" class="terms">
+            By clicking the button, you are agreeing to our
+            <span> Terms and Services </span>
+          </section>
+        </form>
+      </section>
+    </main>
+    <!-- Footer Section-->
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor <br /></a
+        >Coded by
+        <a href="https://vasilemidrigan.github.io">Vasile Midrigan</a>.
+      </p>
+    </footer>
+  </body>
+</html>
