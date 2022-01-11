@@ -32,7 +32,9 @@
       </section>
       <!-- Sign Up Form Section -->
       <section role="sign-up" class="sign-up">
-        <form method="GET" id="form">
+        <!-- using novalidate attr in order to take controll over form 
+                validation. -->
+        <form method="GET" id="form" novalidate>
           <!-- First Name Input -->
           <div class="input">
             <input
@@ -47,7 +49,7 @@
               class="error_sign hidden"
               alt="Error exclamation mark"
             />
-            <p class="error_message hidden">Error Message</p>
+            <p class="error_message hidden"></p>
           </div>
           <!-- Last Name Input -->
           <div class="input">
@@ -63,7 +65,7 @@
               class="error_sign hidden"
               alt="Error exclamation mark"
             />
-            <p class="error_message hidden">Error Message</p>
+            <p class="error_message hidden"></p>
           </div>
 
           <!-- Email Input -->
@@ -80,7 +82,7 @@
               class="error_sign hidden"
               alt="Error exclamation mark"
             />
-            <p class="error_message hidden">Error Message</p>
+            <p class="error_message hidden"></p>
           </div>
 
           <!-- Password Input -->
@@ -97,7 +99,7 @@
               class="error_sign hidden"
               alt="Error exclamation mark"
             />
-            <p class="error_message hidden">Error Message</p>
+            <p class="error_message hidden"></p>
           </div>
 
           <button id="submit" type="submit">Claim your free trial</button>
