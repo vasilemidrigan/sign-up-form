@@ -7,18 +7,22 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const submit = document.getElementById("submit");
 const inputErrorState = document.querySelectorAll(".input_error_state");
-
 // =====================================================================
-
-// Password regexp constant:
-
+// Password Regexp pattern:
 // The valid password should contain at least:
 // - one capital letter
 // - one number
 // - at least 8 characters
 const validPassword = new RegExp("^(?=.*[A-Z])(?=.*[0-9])(?=.{8,})");
+// =====================================================================
+// ========================  Display error function ====================
+// =====================================================================
+// Display error function(applying the styles for input error states)
+// 1. Check the parameter(in order to know on which input field we are
+//    executing the changes):
+// 2. Applying input_error_message styles and showing our exclamation mark:
+// 3. Depending on the input field, show respective error message:
 
-// ========================  Display error function
 function displayError(inputField) {
   // First Name and Last Name Error
   if (inputField === firstName || inputField === lastName) {
@@ -60,6 +64,22 @@ function displayError(inputField) {
     }
   }
 }
+// ========================================================================
+// ====================== Input Event Listeners ===========================
+// ========================================================================
+// 1. Attach a event listener  to the respective input fields (firstName,
+//    lastName, email, and password)
+// 2. Check for the validation:
+//    -> if (firstName.value !== "")
+// 3. If the condition is true, then we remove the input_error_state class,
+//    and actually hide the exclamation mark and error message:
+//    -> firstName.classList.remove("input_error_state");
+//    -> firstName.parentElement.children[1].classList.add("hidden");
+//    -> firstName.parentElement.children[2].classList.add("hidden");
+// 4. If the condition is false, then execute the displayError() function
+//    with respection input argument.
+//    -> displayError(firstName);
+// !  The same rules are applied for the rest of the input fields.
 // First Name Input Event Listener
 firstName.addEventListener(
   "input",
@@ -70,7 +90,6 @@ firstName.addEventListener(
       firstName.parentElement.children[2].classList.add("hidden");
     } else {
       displayError(firstName);
-      console.log("First Name Empty!");
     }
   },
   true
@@ -85,7 +104,6 @@ lastName.addEventListener(
       lastName.parentElement.children[2].classList.add("hidden");
     } else {
       displayError(lastName);
-      console.log("Last Name Empty!");
     }
   },
   true
@@ -105,6 +123,7 @@ email.addEventListener(
   true
 );
 // Password Input Event Listener
+// 1. Test with regex variable:
 password.addEventListener(
   "input",
   function () {
@@ -118,7 +137,17 @@ password.addEventListener(
   },
   true
 );
-// Submit Input Event Listener
+// ======================================================================
+// ======================== Submit Input Event Listener =================
+// ======================================================================
+// 1. What we basically do is that we check if the respective input field
+//    passes or not our own validation
+//    -> (firstName.value === "")
+// 2. If yes - default submit event occur.
+// 3. If not - execute displayError function with respective input parameter.
+//    -> displayError(firstName)
+// 4. And, prevent default submit event.
+//    -> e.preventDefault();
 form.addEventListener("submit", function (e) {
   // First Name Submit
   if (firstName.value === "") {
